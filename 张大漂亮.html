@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"></meta>
+		<title>张俞大漂亮</title>
+		<style>
+			.container{
+				width:200px;
+				height:200px;
+				margin:150px auto;
+			}
+			.cube{
+				width:200px;
+				height:200px;
+				transform-style:preserve-3d;
+				transform:rotateX(30deg) rotateY(80deg);
+				-webkit-animation:rotate 20s infinite;/*20S无限循环旋转*/
+				animation-timing-function:linear;
+			}
+			@-webkit-keyframes rotate{
+				from{
+					transform:rotateX(0deg) rotateY(0deg);
+				}
+				to{
+					transform:rotateX(360deg) rotateY(360deg);
+				}
+			}
+			.pic{
+				width:200px;
+				height:200px;
+			}
+			.cube div{
+				width:200px;
+				height:200px;
+				position:absolute;
+				/*透明度*/
+				opacity:0.8;
+				/*动画效果时间*/
+				transition:all 0.4s;
+			}
+			.cube .out_front{
+				transform:rotateY(0deg) translateZ(100px);
+			}
+			.cube .out_back{
+				transform:rotateY(180deg) translateZ(100px);
+			}
+			.cube .out_left{
+				transform:rotateY(90deg) translateZ(100px);
+			}
+			.cube .out_right{
+				transform:rotateY(-90deg) translateZ(100px);
+			}
+			.cube .out_top{
+				transform:rotateX(90deg) translateZ(100px);
+			}
+			.cube .out_bottom{
+				transform:rotateX(-90deg) translateZ(100px);
+			}
+			/*设置内层*/
+			.cube .in_pic{
+				width:100px;
+				height:100px;
+			}
+			.cube span{
+				width:100px;
+				height:100px;
+				position:absolute;
+				top:50px;
+				left:50px;
+			}
+				/*内部图片*/
+				.cube .in_front{
+					transform:rotateX(0deg) translateZ(50px);
+				}
+				
+				.cube .in_back{
+					transform:rotateX(180deg) translateZ(50px);
+				}
+				.cube .in_left{
+					transform:rotateX(90deg) translateZ(50px);
+				}
+				.cube .in_right{
+					transform:rotateY(-90deg) translateZ(50px);
+				}
+				.cube .in_top{
+					transform:rotateY(90deg) translateZ(50px);
+				}
+			
+				.cube .in_bottom{
+					transform:rotateX(-90deg) translateZ(50px);
+				}
+				/*鼠标悬停  hover */
+				.cube:hover .out_front{
+					transform:rotateY(0deg) translateZ(200px);
+				}
+				.cube:hover .out_back{
+					transform:rotateY(180deg) translateZ(200px);
+				}
+				.cube:hover .out_left{
+					transform:rotateY(90deg) translateZ(200px);
+				}
+				.cube:hover .out_right{
+					transform:rotateY(-90deg) translateZ(200px);
+				}
+				.cube:hover .out_top{
+					transform:rotateX(90deg) translateZ(200px);
+				}
+				.cube:hover .out_bottom{
+					transform:rotateX(-90deg) translateZ(200px);
+				}
+		</style>
+			
+	</head>
+	<body>
+		<div class="container">
+			<div class="cube">
+				<div class="out_front">
+					<img src="Z1.jpg" class="pic"/>
+				</div>	
+				<div class="out_back">
+					<img src="Z2.jpg" class="pic"/>
+				</div>	
+				<div class="out_left">
+					<img src="Z5.jpg" class="pic"/>
+				</div>	
+				<div class="out_right">
+					<img src="Z4.jpg" class="pic"/>
+				</div>	
+				<div class="out_top">
+					<img src="Z6.jpg" class="pic"/>
+				</div>	
+				<div class="out_bottom">
+					<img src="Z3.jpg" class="pic"/>
+				</div>	
+				
+				<span class="in_front">
+					<img src="Z1.jpg" class="in_pic"/>
+				</span>	
+				<span class="in_back">
+					<img src="Z2.jpg" class="in_pic"/>
+				</span>	
+				<span class="in_left">
+					<img src="Z6.jpg" class="in_pic"/>
+				</span>	
+				<span class="in_right">
+					<img src="Z4.jpg" class="in_pic"/>
+				</span>	
+				<span class="in_top">
+					<img src="Z5.jpg" class="in_pic"/>
+				</span>	
+				<span class="in_bottom">
+					<img src="Z3.jpg" class="in_pic"/>
+				</span>	
+					
+			</div>
+			
+		</div>
+	</body>
+</html>
